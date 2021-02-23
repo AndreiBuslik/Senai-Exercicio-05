@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicando estilos CSS através da tag &lt;style&gt;&lt;\style&gt;</title>
+
+    <style type="text/CSS" media="all">
+
+        /********************* Global *******************************/
+
+        *{  /* Seletor universal, seleciona todas as tag's do CSS. */
+
+            margin: 0;              /* Espaçamento entre os elementos */
+            padding: 0;             /* Preenchimento  */
+            box-sizing: border-box; /* Medida da caixa (lembrar do box-model) */
+
+        }
+
+        body{
+
+            background: #f0f2f5;    /* Cor do plano de fundo */
+            font-family: verdana;
+            margin: auto;            /* Balanceia as margens laterais */
+
+        }
+
+        header{
+
+            text-align: center;
+            background: rgb(27, 70, 85);
+            padding: 2rem 0 5rem;
+            color: white;
+
+        }
+
+        h2{
+
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+            /*color: var(--dark-blue);  Função que utiliza uma variável global */
+            font-weight: bold;
+
+        }
+
+
+        /********************* Primeira seção *******************************/
+
+        .initial{
+
+            margin: 3rem 0 3rem 0;
+            border-radius: 0.25rem;   /* Arrendodamento das bordas */
+            background: white;
+            padding: 0.5rem 2rem;
+
+        }
+        
+        /********************* Segunda seção *******************************/
+
+        .font-modified{
+
+            margin: 3rem 0 3rem 0;
+            border-radius: 0.25rem;   /* Arrendodamento das bordas */
+            background: white;
+            padding: 1.5rem 2rem;
+
+        }
+
+        .font-modified #font_family{
+
+           font-family: cursive;
+
+        }
+
+        .font-modified #font_size{
+
+            font-size: 30px;
+            
+        }
+
+        .font-modified #line_heigth{
+
+            line-height: 35px;
+            
+        }
+
+        .font-modified #text_align{
+
+            text-align: right;
+            
+        }
+
+        .font-modified #color{
+
+            color: darkred;
+            
+        }
+
+         /********************* Terceira seção *******************************/
+
+         .identifiers{
+
+            margin: 3rem 0 3rem 0;
+            border-radius: 0.25rem;   /* Arrendodamento das bordas */
+            background: white;
+            padding: 0.5rem 2rem;
+
+         }
+
+         /********************* Quarta seção *******************************/
+
+         .box{
+
+            margin: 3rem 0 3rem 0;
+            border-radius: 0.25rem;   /* Arrendodamento das bordas */
+            background: white;
+            padding: 0.5rem 2rem;
+            border: 2px solid red;
+            box-sizing: border-box;
+
+         }
+
+         /********************* Quinta seção *******************************/
+
+         .final{
+
+            margin: 3rem 0 3rem 0;
+            border-radius: 0.25rem;   /* Arrendodamento das bordas */
+            background: white;
+            padding: 0.5rem 2rem;
+
+         }
+
+         ul{
+
+            padding: 0.5rem 2rem;
+         }
+
+         a{
+
+            color: #49AA26;
+            text-decoration: none;
+
+        }
+
+         a:hover{
+
+            color: #3dd705;
+
+         }
+    
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Aplicando estilos CSS através da tag &lt;style&gt;&lt;\style&gt;</h1>
+    </header>
+
+
+    <main>
+        
+        <section class="initial">
+
+            <h2>Sobre estilos</h2>
+
+            <p>O uso de CSS pode ser feito tanto com a utlização da <em>tag</em> &lt;link&gt;, quando queremos que a manipulação dos estilos da página estejam em um arquivo separado, como a <em>tag</em> &lt;style&gt;&lt;\style&gt;.</p>
+    
+            <p>A <em>tag</em> &lt;style&gt;&lt;\style&gt; mantém a manipulação das modificações de estilo no mesmo arquivo do arquivo de hipertexto (.html). Serão demonstrados alguns usos de CSS utilizando a <em>tag</em> &lt;style&gt;&lt;\style&gt;. Não discutiremos sobre se devemos usar a <em>tag</em> &lt;style&gt;&lt;\style&gt; ou fazer um arquivo em seprado para o CSS e utilizar a <em>tag</em> &lt;link&gt;. Nosso objetivo neste momento é aprender algumas propriedades do CSS e o que ocorre com a página quando as utlizamos.</p>
+
+        </section>
+
+       <section class="font-modified">
+
+            <h2>Fontes, cores e outras manipulações de texto</h2>
+
+            <p>Podemos utilizar o CSS para modificar o texto da página. Uma das modificações possíveis é na fonte do texto.</p>
+
+            <p id="font_family">Mudando a fonte podemos deixa um texto mais legível ou agradável. Perceba que o parágrafo anterior possui uma fonte diferente deste, enquanto no primeira temos uma fonte da família <em>Verdana</em> nesta seção temos uma fonte com estilo de letra cursiva (<em>cursive</em>).</p>
+
+            <p id="font_size">Podemos também modificar o tamanho da fonte utilizada para obter outro tipo de estética.</p>
+
+            <p id="line_heigth">Temos a possibilidade de aumentar (caso mostrado aqui) ou diminuir o espaçamento entre as linhas, deixando os textos com uma melhor apresentação ou mesmo auxiliando na leitura para pessoas certas limitações de visão.</p>
+
+            <p id="text_align">Outra possibilidade e alterar o alinhamento dos textos. Este parágrafo está alinhado à direita, os títulos das seções estão alinhados à esquerda, já o título principal da página está alinhado com o centro da página.</p>
+
+            <p id="color">As cores das letras também podem ser modificadas, seja no texto inteiro ou em apenas um parágrafo.</p>
+
+            
+
+       </section>
+
+       <section class="identifiers">
+
+            <h2>Marcadores e identificadores CSS</h2>
+
+            <p>Para fazer as mudanças nos texto foram utilizados marcadores e identificadores CSS, assim sabemos exatamente onde iremos implementar uma modificação na página. Os marcadores utilizados até agora foram o "<em>class=""</em>" e <em>id=""</em>. O primeiro pode ser utilizado para identificar mais de uma <em>tag</em> com o mesmo nome, por exemplo <em>class="Nome_da_classe"</em>. Já a segunda deve ser única para cada <em>tag</em>.</p>
+
+            <p>Outra forma é utilizar diretamente o nome da <em>tag</em> em nosso CSS e fazedr as mudanças desejadas toda vez que a <em>tag</em> for utilizada.</p>
+
+            <p>Mesmo que não apliquemos nenhum estilo alguns estilos são aplicados pelos navegadores que usamos (Chrome, Firefox, etc.), é possível mudar isso utilizando um marcador especial para nosso CSS. O marcador "*" indicará quais estilos usaremos por padrão, eliminando os estilos do navegador.</p>
+
+       </section>
+
+       <section class="box">
+
+            <h2>O mundo como caixas e contêineres</h2>
+
+            <p>Podemos imaginar toda página web como uma caixa ou conjuntos de caixas/contêires. Cada seção desta página, bem como o cabeçalho no alto da página podem ser vistos como pequenas caixas dentro de uma grande caixa (a página inteira).</p>
+
+            <p>Para uma ilustração veja esta seção. Colocamos uma borda com expessura e com cor vermelha para delimitar a caixa desta seção.</p>
+
+       </section>
+
+       <section class="final">
+
+            <h2>Fim do exercício mas não do aprendizado</h2>
+
+            <p>Neste exercício vimos funcionalidades básicas mas importantes do CSS. Todos os exercícios serão postados no meu GitHub para seguir meu progresso.</p>
+
+            <br>
+
+            <ul>
+                <li><a href="https://github.com/AndreiBuslik" target="_blank">Link para meu Git</a></li>
+            </ul>
+       </section>
+        
+    </main>
+</body>
+</html>
